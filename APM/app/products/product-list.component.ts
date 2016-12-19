@@ -70,7 +70,7 @@ export class ProductListComponent implements OnInit {
         this.showImage = !this.showImage;
     }
     ngOnInit(): void {
-
+ 
     }
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
