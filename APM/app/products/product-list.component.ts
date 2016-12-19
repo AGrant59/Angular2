@@ -11,16 +11,15 @@ import { ProductService } from './product.service';
 
 
 export class ProductListComponent implements OnInit {
-
-    constructor(private _productService: ProductService) {
-    };
-
     pageTitle: string = "Product Listings";
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = true;
     listFilter: string;
     products: IProduct[];
+
+    constructor(private _productService: ProductService) {
+    };
 
     toggleImage(): void {
         this.showImage = !this.showImage;
