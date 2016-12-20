@@ -9,13 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
-var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
+var shared_module_1 = require("../shared/shared.module");
 var product_detail_component_1 = require("./product-detail.component");
 var product_list_component_1 = require("./product-list.component");
 var product_filter_pipe_1 = require("./product-filter.pipe");
-var star_component_1 = require("../shared/star.component");
 var product_guard_service_1 = require("./product-guard.service");
 var product_service_1 = require("./product.service");
 var ProductModule = (function () {
@@ -28,12 +26,10 @@ ProductModule = __decorate([
         declarations: [
             product_detail_component_1.ProductDetailComponent,
             product_list_component_1.ProductListComponent,
-            product_filter_pipe_1.ProductFilterPipe,
-            star_component_1.StarComponent
+            product_filter_pipe_1.ProductFilterPipe
         ],
         imports: [
-            forms_1.FormsModule,
-            common_1.CommonModule,
+            shared_module_1.SharedModule,
             router_1.RouterModule.forChild([
                 { path: 'products', component: product_list_component_1.ProductListComponent },
                 { path: 'product/:id', canActivate: [product_guard_service_1.ProductDetailGuard], component: product_detail_component_1.ProductDetailComponent }
